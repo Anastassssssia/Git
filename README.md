@@ -76,11 +76,15 @@
 Виконано команди <code>git config --global format.pretty ‘%h %ad | %s%d [%an]’</code> та <code>git config --global log.date short</code>.<br> 
 <a href="./screenshots/22.png">Результат</a>: Налаштовано формат виводу історії комітів за замовчуванням.<br>
 
-
-
-
-
-
-
+<h3>8. Отримання старих версій</h3>
+<b>Крок 01: Отримання хешів попередніх комітів</b><br> 
+Виконано команду <code>git log</code>.<br> 
+<a href="./screenshots/23.png">Результат</a>: Виведено список комітів із хешами.<br>
+<b>Крок 02: Повернення до попереднього стану</b><br> 
+Виконано команду <code>git checkout ab924ed</code><br>
+<a href="./screenshots/24.png">Результат</a>: Директорію переміщено в стан, що відповідає першому коміту. Перевірено вміст файлу hello.html за допомогою команди <code>cat hello.html</code>, який містив текст "Hello, World!". <br>
+<b>Крок 03: Повернення до останньої версії в гілці main</b><br> 
+Виконано команду <code>git switch main</code> для перемикання на основну гілку.
+<a href="./screenshots/25.png">Результат: Перемкнуто на гілку main, де виведено останню версію файлу hello.html.<br>
 
 
