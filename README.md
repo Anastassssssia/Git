@@ -40,11 +40,11 @@
 
 <h3>6. Зміни, а не файли</h3>
 <b>Крок 01: Додавання стандартних тегів сторінок</b><br>
-Змінено сторінку «Hello, World», додавши стандартні теги < html > і < body >.  Вміст файлу <a href="./screenshots/12.png">hello.html</a> <br>
+Змінено сторінку «Hello, World», додавши стандартні теги &lt;html&gt; і &lt;body&gt;.  Вміст файлу <a href="./screenshots/12.png">hello.html</a> <br>
 <b>Крок 02: Додавання змін в індекс</b><br>
 Виконано команду <code>git add hello.html</code>.<br>
 <b>Крок 03: Додавання заголовку HTML</b><br>
-Вміст файлу <a href="./screenshots/13.png">hello.html</a> змінено, додано < head >.<br> 
+Вміст файлу <a href="./screenshots/13.png">hello.html</a> змінено, додано &lt;head&gt;.<br> 
 <b>Крок 04: Перевірка поточного стану</b><br>
 Виконано команду <code>git status</code>.<br>
 <a href="./screenshots/14.png">Результат</a>: Файл hello.html згадано двічі: перша зміна (додавання стандартних тегів) проіндексована і готова для коміту; друга зміна (додавання заголовків HTML) ще не проіндексована.<br>
@@ -87,4 +87,23 @@
 Виконано команду <code>git switch main</code> для перемикання на основну гілку.<br>
 <a href="./screenshots/25.png">Результат</a>: Перемкнуто на гілку main, де виведено останню версію файлу hello.html.<br>
 
+<h3>9. Створення тегів версій</h3>
+<b>Крок 01: Створення тегу першої версії</b><br> 
+Виконано команди <code>git tag v1</code> та <code>git log</code>.<br> 
+<a href="./screenshots/26.png">Результат</a>: Створено тег <code>v1 </code>для сторінки hello.html. Команда <code>git log</code> відобразила історію комітів із зазначенням нового тегу.
+<br>
+<b>Крок 02: Створення тегу для попередньої версії</b><br> 
+Виконано команди <code>git checkout v1^</code> та <code>cat hello.html</code> для перемикання на попередній коміт.<a href="./screenshots/27.png">Результат</a>: Файл hello.html відображено у версії без &lt;head&gt;<br>
+Після цього створено тег <code>v1-beta</code>. <a href="./screenshots/28.png">Результат</a>: Тег v1-beta додано до попередньої версії.<br>
 
+<b>Крок 03: Перемикання між версіями</b><br> 
+Виконано команди <code>git checkout v1</code> та <code>git checkout v1-beta</code>.<br>
+<a href="./screenshots/29.png">Результат</a>: Файл перемкнуто на версію з тегами v1 та v1-beta відповідно. <br>
+
+<b>Крок 04: Перегляд доступних тегів</b><br> 
+Виконано команду <code>git tag</code>.<br>
+<a href="./screenshots/30.png">Результат</a>: Виведено список тегів.<br>
+
+<b>Крок 05: Перегляд тегів у логах</b><br> 
+Виконано команду <code>git log main --all</code>.<br>
+<a href="./screenshots/31.png">Результат</a>: Теги видно в історії комітів.<br>
